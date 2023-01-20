@@ -31,12 +31,15 @@ export default function Store() {
         <p>{error.message}</p>
       ) : isDataLoaded ? (
         data.map((item) => (
-          <article key={item.id} style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}>
-            <img src={item.images[0]} alt="product"></img>
+          <article key={item.id}>
+            <img 
+            src={item.images[0]} 
+            alt="product"
+            style={{
+              maxWidth: "100%",
+              maxHeight: "120px",
+            }}
+            ></img>
             <h4>{item.title}</h4>
           </article>
         ))
