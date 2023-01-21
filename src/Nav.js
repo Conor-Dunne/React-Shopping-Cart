@@ -8,13 +8,13 @@ export default function Nav() {
       </div>
       <ul>
         <li  className="contrast">
-          <Link to="/">Home</Link>
+          <Link to="/">HOME</Link>
         </li>
         <li>
-          <Link to="/store">Store</Link>
+          <Link to="/store">STORE</Link>
         </li>
         <li>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart">CART</Link>
         </li>
       </ul>
     </nav>
