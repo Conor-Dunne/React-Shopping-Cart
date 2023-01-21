@@ -50,6 +50,7 @@ nav {
 }
 
 .grid {
+  padding: 3rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
@@ -67,17 +68,21 @@ article {
   padding: 10px;
   box-shadow: 1px 1px 5px 2px #edebeb;
   width: 200px;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .home {
   min-height: 100vh;
   width: 100%;
+  padding-left: 3rem;
   background-image: url(./assets/mediamodifier-JskqEILt-ds-unsplash.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 #icon {
@@ -90,13 +95,14 @@ article {
 }
 
 #shop-btn {
-  border: 1px solid white;
+  border: none;
   padding: 20px;
-  background-color: #8d8da6;
+  background-color: #5eba9e;
   border-radius: 10px;
   color: aliceblue;
-  box-shadow: 2px 3px 11px #bbb9b9;
+  box-shadow: 2px 3px 11px #5c5c5c;
   font-family: inherit;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 300;
+  cursor: pointer;
 }

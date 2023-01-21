@@ -15,6 +15,7 @@ export default function Store() {
         setData(response.data.products);
         setIsLoading(false);
         setIsDataLoaded(true);
+        console.log(response.data.products);
       } catch (error) {
         setError(error);
         setIsLoading(false);
@@ -33,14 +34,17 @@ export default function Store() {
         data.map((item) => (
           <article key={item.id}>
             <img 
-            src={item.images[0]} 
+            src={item.thumbnail} 
             alt="product"
             style={{
               maxWidth: "100%",
               maxHeight: "120px",
             }}
             ></img>
-            <h4>{item.title}</h4>
+            <p>{item.title}</p>
+            <h1 style={{
+              fontWeight: "800",
+            }}>${item.price}</h1>
           </article>
         ))
       ) : (
