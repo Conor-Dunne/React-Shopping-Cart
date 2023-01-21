@@ -7,7 +7,8 @@ export default function Home () {
         <main className="home">
             <h1 style={{
                 color: "white",
-                fontSize: "3rem",
+                fontSize: "clamp(1rem, 4rem, 7rem)",
+                textShadow: "#767575 0px 0px 20px",
             }}>Welcome to our store!</h1>
         </main>
     )
