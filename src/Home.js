@@ -10,6 +10,7 @@ export default function Home () {
                 fontSize: "clamp(1rem, 4rem, 7rem)",
                 textShadow: "#767575 0px 0px 20px",
             }}>Welcome to our store!</h1>
+            <button id="shop-btn">Shop Now</button>
         </main>
     )
 }

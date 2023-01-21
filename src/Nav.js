@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <nav>
       <div id="logo">
-        <h1>GoStore</h1>
+        <h1>GoStore<div id="icon"></div></h1>
       </div>
       <ul>
         <li  className="contrast">
