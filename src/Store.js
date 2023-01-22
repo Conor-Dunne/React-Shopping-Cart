@@ -1,73 +1,56 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
-import { useParams } from 'react-router';
+import { useParams } from "react-router";
 
-
-export default function Store() {
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [isDataLoaded, setIsDataLoaded] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("https://dummyjson.com/products");
-        setData(response.data.products);
-        setIsLoading(false);
-        setIsDataLoaded(true);
-        console.log(response.data.products);
-      } catch (error) {
-        setError(error);
-        setIsLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
-
+export function Store({ products }) {
   return (
     <div className="grid">
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>{error.message}</p>
-      ) : isDataLoaded ? (
-        data.map((item) => (
-          <Link to={`/product/${item.id}`} >
+      {products.map((item) => (
+        <Link to={`/product/${item.id}`}>
           <article key={item.id}>
-            <img 
-            src={item.thumbnail} 
-            alt="product"
-            style={{
-              maxWidth: "100%",
-              maxHeight: "120px",
-            }}
+            <img
+              src={item.thumbnail}
+              alt="product"
+              style={{
+                maxWidth: "100%",
+                maxHeight: "120px",
+              }}
             ></img>
             <p>{item.title}</p>
-            <h1 style={{
-              fontWeight: "800",
-            }}>${item.price}</h1>
+            <h1
+              style={{
+                fontWeight: "800",
+              }}
+            >
+              ${item.price}
+            </h1>
           </article>
-          </Link>
-        ))
-      ) : (
-        <p>No data available</p>
-      )}
+        </Link>
+      ))}
     </div>
   );
 }
 
-// export function ProductPage() {
-//   let { id } = useParams();
-//   let product = data.find(product => product.id === id);
+export function ProductPage({ products }) {
+  let { id } = useParams();
+  console.log("ni", products);
+  const product = products.find((obj) => obj.id === Number(id));
+  console.log("yo", product);
 
-//   return(
-//       <div>
-//           <h1>{product.title}</h1>
-//       </div>
-//   )
+  return (
+    <div>
+      <h1>{product.title}</h1>
+      <h1>{id}</h1>
 
-// }
-
-// https://dummyjson.com/products
+      {product.images.map((ref) => (
+        <img
+          src={ref}
+          alt="product"
+          style={{
+            maxWidth: "100%",
+            maxHeight: "120px",
+          }}
+        ></img>
+      ))}
+    </div>
+  );
+}
