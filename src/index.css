@@ -40,6 +40,8 @@ h1 {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-wrap: wrap;
   padding: 30px 40px;
