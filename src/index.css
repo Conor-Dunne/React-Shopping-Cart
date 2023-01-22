@@ -68,8 +68,10 @@ article {
   padding: 10px;
   box-shadow: 1px 1px 5px 2px #edebeb;
   width: 200px;
+  height: 200px;
   font-size: 0.8rem;
   cursor: pointer;
+  color: black;
 }
 
 .home {

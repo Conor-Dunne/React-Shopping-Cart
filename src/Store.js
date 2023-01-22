@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { json } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useParams } from 'react-router';
+
 
 export default function Store() {
   const [data, setData] = useState(null);
@@ -32,6 +34,7 @@ export default function Store() {
         <p>{error.message}</p>
       ) : isDataLoaded ? (
         data.map((item) => (
+          <Link to={`/product/${item.id}`} >
           <article key={item.id}>
             <img 
             src={item.thumbnail} 
@@ -46,6 +49,7 @@ export default function Store() {
               fontWeight: "800",
             }}>${item.price}</h1>
           </article>
+          </Link>
         ))
       ) : (
         <p>No data available</p>
@@ -53,5 +57,17 @@ export default function Store() {
     </div>
   );
 }
+
+// export function ProductPage() {
+//   let { id } = useParams();
+//   let product = data.find(product => product.id === id);
+
+//   return(
+//       <div>
+//           <h1>{product.title}</h1>
+//       </div>
+//   )
+
+// }
 
 // https://dummyjson.com/products
