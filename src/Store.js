@@ -30,7 +30,7 @@ export function Store({ products }) {
   );
 }
 
-export function ProductPage({ products }) {
+export function ProductPage({ products, addToCart }) {
   let { id } = useParams();
   console.log("ni", products);
   const product = products.find((obj) => obj.id === Number(id));
@@ -79,7 +79,9 @@ export function ProductPage({ products }) {
           }}
           >{product.description}</p>
           <h1>${product.price}</h1>
-          <button className="shop-btn">Add to cart</button>
+          <button 
+          onClick={() => addToCart(product)}
+          className="shop-btn">Add to cart</button>
     </div>
   );
 }
