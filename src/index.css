@@ -110,3 +110,12 @@ article {
   font-weight: 300;
   cursor: pointer;
 }
+
+.shop-btn:hover {
+  background-color: #417062;
+
+}
+
+.shop-btn:active {
+  transform: translateY(4px);
+}

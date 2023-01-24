@@ -66,7 +66,7 @@ export function ProductPage({ products, addToCart }) {
           alt="product"
           style={{
             maxWidth: "100%",
-            height: "300px",
+            height: "120px",
             borderRadius: "5px",
             boxShadow: "#ccbfbf 1px 1px 9px 2px",
           }}
