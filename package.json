@@ -1,7 +1,7 @@
 {
   "name": "react-shopping-cart",
   "version": "0.1.0",
-  "homepage": "https://github.com/Conor-Dunne/React-Shopping-Cart",
+  "homepage": "https://Conor-Dunne.github.io/React-Shopping-Cart",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
