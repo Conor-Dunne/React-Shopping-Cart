@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import React, { useState } from "react";
 
 
-export default function Store({ products }) {
+export function Store({ products }) {
   return (
     <div className="grid">
       {products.map((item) => (
@@ -100,7 +100,7 @@ export function ProductPage({ products, addToCart }) {
 }
 
 export function addToCartConfirmation() {
-  
+
 }
 
 
