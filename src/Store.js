@@ -80,7 +80,9 @@ export function ProductPage({ products, addToCart }) {
           }}
           >{product.description}</p>
           <h1>${product.price}</h1>
-          <div>
+          <div style={{
+            fontFamily: "inherit",
+          }}>
             <label htmlFor="quantity" >
               Qty:
             </label>
