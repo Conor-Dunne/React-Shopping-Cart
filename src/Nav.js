@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 export default function Nav({cart}) {
   return (
     <nav>
-      <div id="logo">
+<Link to="/">
+<div id="logo">
         <h1>
           GoStore<div id="icon"></div>
         </h1>
       </div>
+</Link>
       <ul>
         <li className="contrast">
           <Link to="/">HOME</Link>

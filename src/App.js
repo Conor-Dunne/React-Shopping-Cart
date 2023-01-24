@@ -10,13 +10,16 @@ import Cart from './Cart';
 function App() {
   const [products, setProducts] = useState(null);
   const [cart, setCart] = useState([]);
+  const [noOfItems, setNoOfItems] = useState(0);
   const [total, setTotal] = useState(0);
 
-  function handleAddToCart(order) {
+  function handleAddToCart(order, quantity) {
     let newCart = cart.slice();
+    order.quantity = quantity;
+    setNoOfItems((prev) => prev + Number(order.quantity))
     newCart.push(order);
     setCart(newCart);
-    setTotal((prev) => prev + Number(order.price));
+    setTotal((prev) => prev + Number(order.price * order.quantity));
   }
 
   useEffect(() => {
@@ -37,7 +40,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/store' element={<Store products={products} />} />
-      <Route path='/cart' element={<Cart cart={cart} total={total}/>} />
+      <Route path='/cart' element={<Cart cart={cart} total={total} noOfItems={noOfItems}/>} />
       <Route path='/product/:id' element={<ProductPage products={products} addToCart={handleAddToCart}/>} />
     </Routes>
     </div>
