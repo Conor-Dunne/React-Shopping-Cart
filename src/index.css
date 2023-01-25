@@ -102,8 +102,8 @@ article {
   color: aliceblue;
   box-shadow: 2px 3px 11px #5c5c5c;
   font-family: inherit;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
+  font-weight: 400;
   cursor: pointer;
 }
 
