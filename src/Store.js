@@ -81,15 +81,18 @@ export function ProductPage({ products, addToCart }) {
           >{product.description}</p>
           <h1>${product.price}</h1>
           <div style={{
-            fontFamily: "inherit",
+            fontSize: "1.5rem",
           }}>
             <label htmlFor="quantity" >
-              Qty:
+              {`Qty: `} 
             </label>
             <select 
             name="quauntity" 
             id="quantity"
             onChange={(e) => setQuantity(e.target.value)}
+            style={{
+              fontSize: "inherit",
+            }}
             >
               {quantityOptions()}
             </select>

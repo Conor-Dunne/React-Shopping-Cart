@@ -11,7 +11,7 @@ export default function Nav({cart}) {
       </div>
 </Link>
       <ul>
-        <li className="contrast">
+        <li>
           <Link to="/">HOME</Link>
         </li>
         <li>

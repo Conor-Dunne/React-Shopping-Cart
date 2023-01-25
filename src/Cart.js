@@ -8,6 +8,7 @@ export default function Cart({ cart, total, noOfItems }) {
         style={{
           maxWidth: "300px",
           margin: "30px auto",
+          gap: "30px",
         }}
       >
         {cart.map((order) => (
