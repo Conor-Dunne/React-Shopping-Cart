@@ -99,14 +99,13 @@ article {
 
 .shop-btn {
   border: none;
-  padding: 20px;
+  padding: 16px 30px;
   background-color: #5eba9e;
-  border-radius: 10px;
-  color: aliceblue;
-  box-shadow: 2px 3px 11px #5c5c5c;
+  border-radius: 108px;
+  color: white;
   font-family: inherit;
   font-size: clamp(0.5rem, 5vw, 1.5rem);
-  font-weight: 400;
+  font-weight: 200;
   cursor: pointer;
 }
 
