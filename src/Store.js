@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
+import React, { useState } from "react";
+
 
 export function Store({ products }) {
   return (
@@ -32,9 +34,8 @@ export function Store({ products }) {
 
 export function ProductPage({ products, addToCart }) {
   let { id } = useParams();
-  console.log("ni", products);
+  const [quantity, setQuantity] = useState(1);
   const product = products.find((obj) => obj.id === Number(id));
-  console.log("yo", product);
 
   return (
     <div
@@ -79,9 +80,40 @@ export function ProductPage({ products, addToCart }) {
           }}
           >{product.description}</p>
           <h1>${product.price}</h1>
+          <div style={{
+            fontSize: "1.5rem",
+          }}>
+            <label htmlFor="quantity" >
+              {`Qty: `} 
+            </label>
+            <select 
+            name="quauntity" 
+            id="quantity"
+            onChange={(e) => setQuantity(e.target.value)}
+            style={{
+              fontSize: "inherit",
+            }}
+            >
+              {quantityOptions()}
+            </select>
+          </div>
           <button 
-          onClick={() => addToCart(product)}
+          onClick={() => addToCart(product, quantity)}
           className="shop-btn">Add to cart</button>
     </div>
   );
+}
+
+export function addToCartConfirmation() {
+
+}
+
+
+
+const quantityOptions = function() {
+  const options = []
+  for (let i = 1; i < 30; i ++) {
+      options.push(<option value={i}>{i}</option>)
+  }
+  return options;
 }

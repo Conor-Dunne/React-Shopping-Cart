@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Cart({ cart, total }) {
+export default function Cart({ cart, total, noOfItems }) {
   return (
     <>
       <div
@@ -8,6 +8,7 @@ export default function Cart({ cart, total }) {
         style={{
           maxWidth: "300px",
           margin: "30px auto",
+          gap: "30px",
         }}
       >
         {cart.map((order) => (
@@ -27,9 +28,10 @@ export default function Cart({ cart, total }) {
               alt={order.title}
             />
             <h1>${order.price}</h1>
+            <h2>Qty: {order.quantity}</h2>
           </article>
         ))}
-        <h1>Order Total: ${total}</h1>
+        <h1>Order Total {`: ${noOfItems} item(s)`}: ${total}</h1>
         <button
          className="shop-btn"
          style={{
@@ -41,3 +43,4 @@ export default function Cart({ cart, total }) {
     </>
   );
 }
+
