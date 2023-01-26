@@ -90,12 +90,15 @@ article {
 }
 
 #icon {
+  text-align: center;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 100;
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: greenyellow;
-  border-radius: 1000px;
-  margin-left: 10px;
+  width: 36px;
+  background-color: #5eba9e;
+  margin-left: 0px;
+  letter-spacing: -4px;
 }
 
 .shop-btn {

@@ -5,7 +5,7 @@ export default function Nav({cart}) {
     <nav>
       <div id="logo">
         <h1>
-          GoStore<div id="icon"></div>
+          GoStore<div id="icon">GS</div>
         </h1>
       </div>
       <ul>
@@ -21,7 +21,7 @@ export default function Nav({cart}) {
           <Link to="/cart">CART</Link>
           <div
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#e5524b",
               borderRadius: "1029px",
               display: cart.length < 1 ? "none" : "flex",
               fontSize: "0.7rem",
