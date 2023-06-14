@@ -1,3 +1,16 @@
+# Shopping cart
+
+A simple fake store React app.
+
+[Live Demo](https://conor-dunne.github.io/React-Shopping-Cart/) :point_left:
+
+
+## Built with
+
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [Dummy JSON API](https://dummyjson.com/products)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
