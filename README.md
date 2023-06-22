@@ -4,6 +4,10 @@ A simple fake store React app.
 
 [Live Demo](https://conor-dunne.github.io/React-Shopping-Cart/) :point_left:
 
+# Screenshot
+
+![Screenshot](./public/shoppin_cart.jpg)
+
 
 ## Built with
 
